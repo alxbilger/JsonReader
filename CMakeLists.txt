@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.12)
 project(JsonReader VERSION 1.0 LANGUAGES CXX)
 
 find_package(SofaFramework REQUIRED)
-find_package(Sofa.Simulation.Graph REQUIRED)
+sofa_find_package(Sofa.Simulation.Graph REQUIRED)
 
 # List all files
 set(JSONREADER_SRC_DIR src/${PROJECT_NAME})
@@ -22,7 +22,7 @@ set(README_FILES
 # Create the plugin library.
 add_library(${PROJECT_NAME} SHARED ${HEADER_FILES} ${SOURCE_FILES} ${README_FILES})
 
-target_link_libraries(${PROJECT_NAME} SofaFramework Sofa.Simulation.Graph)
+target_link_libraries(${PROJECT_NAME} Sofa.Simulation.Graph)
 
 # Create package Config, Version & Target files.
 # Deploy the headers, resources, scenes & examples.
