@@ -8,6 +8,7 @@ sofa_find_package(Sofa.Simulation.Graph REQUIRED)
 set(JSONREADER_SRC_DIR src/${PROJECT_NAME})
 set(HEADER_FILES
     ${JSONREADER_SRC_DIR}/config.h.in
+    ${JSONREADER_SRC_DIR}/json.hpp
     ${JSONREADER_SRC_DIR}/SceneLoaderJson.h
 )
 set(SOURCE_FILES

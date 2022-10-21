@@ -3,7 +3,7 @@
 #include <sofa/simulation/Node.h>
 #include <algorithm>
 #include <fstream>
-#include <json.h>
+#include <JsonReader/json.hpp>
 #include <sofa/core/ObjectFactory.h>
 #include <sofa/simulation/graph/DAGNode.h>
 
