@@ -1,8 +1,10 @@
 ![status](https://github.com/alxbilger/JsonReader/actions/workflows/ci.yml/badge.svg)
 
-
-# JsonReader
-SOFA plugin adding the ability to read SOFA scenes written in the json format
+<p align="center">
+ <img width="100px" src="https://raw.githubusercontent.com/alxbilger/JsonReader/main/JsonReader-logo.svg" align="center" alt="JsonReader" />
+ <h2 align="center">JsonReader</h2>
+ <p align="center">SOFA plugin adding the ability to read SOFA scenes written in the json format</p>
+</p>
 
 # Usage
 
