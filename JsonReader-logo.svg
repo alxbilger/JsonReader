@@ -7,8 +7,8 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    sodipodi:docname="JsonReader-logo.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -16,17 +16,17 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
      id="namedview7"
-     pagecolor="#ffffff"
+     pagecolor="#666666"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="true"
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.5052024"
-     inkscape:cx="313.73564"
-     inkscape:cy="610.64635"
+     inkscape:cx="560.17153"
+     inkscape:cy="713.57539"
      inkscape:window-width="2400"
      inkscape:window-height="1261"
      inkscape:window-x="2391"
@@ -58,7 +58,7 @@
        width="492.81821"
        height="211.05812"
        x="-123.07362"
-       y="62.846096"
+       y="55.966923"
        ry="7.7605171"
        inkscape:export-filename="C:\Users\Alex\SOFAJSON.png"
        inkscape:export-xdpi="96"
@@ -1316,7 +1316,7 @@ RU5ErkJggg==
            style="font-style:normal;font-weight:normal;font-size:192px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect1850);fill:#3c3c3c;fill-opacity:1;stroke:none"><tspan
              x="-488.47852"
              y="452.60352"
-             id="tspan22303">{</tspan></text>
+             id="tspan22483">{</tspan></text>
         <text
            xml:space="preserve"
            transform="matrix(-0.92502746,0,0,0.92502746,-66.298661,-206.81488)"
@@ -1324,7 +1324,7 @@ RU5ErkJggg==
            style="font-style:normal;font-weight:normal;font-size:192px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect1850-5);fill:#3c3c3c;fill-opacity:1;stroke:none"><tspan
              x="-488.47852"
              y="452.60352"
-             id="tspan22305">{</tspan></text>
+             id="tspan22485">{</tspan></text>
       </g>
     </g>
   </g>
