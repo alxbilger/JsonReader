@@ -79,12 +79,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   JsonReader Documentation
-  </a>
- </li>
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="api/library_root.html">
    Library API
@@ -260,12 +255,51 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usage">
+   Usage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compilation">
+   Compilation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#api-documentation">
+   API Documentation
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -277,6 +311,34 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usage">
+   Usage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compilation">
+   Compilation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#api-documentation">
+   API Documentation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -286,16 +348,106 @@ title="Print to PDF"
                 
   <div class="section" id="jsonreader-documentation">
 <h1>JsonReader Documentation<a class="headerlink" href="#jsonreader-documentation" title="Permalink to this headline">#</a></h1>
+<a class="reference internal image-reference" href="../JsonReader-logo.png"><img alt="JsonReader logo" src="../JsonReader-logo.png" style="width: 467px;" /></a>
+<p>SOFA plugin adding the ability to read SOFA scenes written in the json format</p>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>runSofa -l JsonReader path/to/scene.json
+</pre></div>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h2>
+<p>Examples are provided in the <cite>scenes</cite> folder.
+A SOFA scene written in json looks like:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;Node&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;root&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;dt&quot;</span><span class="p">:</span> <span class="s2">&quot;0.02&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;gravity&quot;</span><span class="p">:</span> <span class="s2">&quot;0 -10 0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;printLog&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Node&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;plugins&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;RequiredPlugin&quot;</span><span class="p">:[</span>
+        <span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Sofa.Component.Constraint.Projective&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Sofa.Component.Engine.Select&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Sofa.Component.LinearSolver.Direct&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Sofa.Component.Mass&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Sofa.Component.ODESolver.Backward&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Sofa.Component.SolidMechanics.FEM.Elastic&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Sofa.Component.StateContainer&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Sofa.Component.Topology.Container.Grid&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Sofa.Component.Visual&quot;</span><span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;VisualStyle&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;displayFlags&quot;</span><span class="p">:</span> <span class="s2">&quot;showBehaviorModels showForceFields&quot;</span> <span class="p">},</span>
+    <span class="nt">&quot;DefaultAnimationLoop&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;animationLoop&quot;</span> <span class="p">},</span>
+    <span class="nt">&quot;DefaultVisualManagerLoop&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;visualLoop&quot;</span> <span class="p">},</span>
+    <span class="nt">&quot;EulerImplicitSolver&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;odesolver&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;rayleighStiffness&quot;</span><span class="p">:</span> <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;rayleighMass&quot;</span><span class="p">:</span> <span class="s2">&quot;0.1&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;MechanicalObject&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;DoFs&quot;</span> <span class="p">},</span>
+    <span class="nt">&quot;UniformMass&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;mass&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;totalMass&quot;</span><span class="p">:</span> <span class="s2">&quot;320&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;RegularGridTopology&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;grid&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;nx&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;ny&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;nz&quot;</span><span class="p">:</span> <span class="s2">&quot;20&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;xmin&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;xmax&quot;</span><span class="p">:</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;ymin&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;ymax&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;zmin&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;zmax&quot;</span><span class="p">:</span> <span class="s2">&quot;19&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;BoxROI&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;box&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;box&quot;</span><span class="p">:</span> <span class="s2">&quot;10 -1 -0.0001  -5 4 0.0001&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;FixedConstraint&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;indices&quot;</span><span class="p">:</span> <span class="s2">&quot;@box.indices&quot;</span> <span class="p">},</span>
+    <span class="nt">&quot;EigenSimplicialLDLT&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;CompressedRowSparseMatrixMat3x3d&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;ordering&quot;</span><span class="p">:</span> <span class="s2">&quot;Natural&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;HexahedronFEMForceField&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;FEM&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;youngModulus&quot;</span><span class="p">:</span> <span class="s2">&quot;4000&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;poissonRatio&quot;</span><span class="p">:</span> <span class="s2">&quot;0.3&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;large&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="compilation">
+<h2>Compilation<a class="headerlink" href="#compilation" title="Permalink to this headline">#</a></h2>
+<p>See documentation on the SOFA website to compile an external plugin: <a class="reference external" href="https://www.sofa-framework.org/community/doc/plugins/build-a-plugin-from-sources/">https://www.sofa-framework.org/community/doc/plugins/build-a-plugin-from-sources/</a></p>
+<p>Dependencies: only SOFA is a dependency</p>
+</div>
+<div class="section" id="api-documentation">
+<h2>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">#</a></h2>
 <div class="toctree-wrapper compound">
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">JsonReader Documentation</a></li>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="api/library_root.html">Library API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/library_root.html#class-hierarchy">Class Hierarchy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/library_root.html#file-hierarchy">File Hierarchy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/library_root.html#full-api">Full API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/library_root.html#full-api">Full API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/library_root.html#variables">Variables</a></li>
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+</div>
 </div>
 </div>
 
