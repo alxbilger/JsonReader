@@ -1,7 +1,7 @@
 JsonReader Documentation
 ========================
 
-.. image:: ../JsonReader-logo.png
+.. image:: JsonReader-logo.png
   :width: 467
   :alt: JsonReader logo
 
