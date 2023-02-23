@@ -7,6 +7,9 @@
 namespace sofa::simulation
 {
 
+/**
+ * SOFA scene loader able to load *.json and *.jscn files, written in the JSON format
+ */
 class SOFA_JSONREADER_API SceneLoaderJson : public sofa::simulation::SceneLoader
 {
 public:
