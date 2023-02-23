@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 project(JsonReader VERSION 1.0 LANGUAGES CXX)
 
-find_package(SofaFramework REQUIRED)
+find_package(Sofa.Config REQUIRED)
 sofa_find_package(Sofa.Simulation.Graph REQUIRED)
 
 # List all files
