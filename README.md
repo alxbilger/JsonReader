@@ -2,7 +2,7 @@
 [![docs](https://github.com/alxbilger/JsonReader/actions/workflows/doc.yml/badge.svg)](https://alxbilger.github.io/JsonReader/)
 
 <p align="center">
- <img width="467px" height="200px" src="https://raw.githubusercontent.com/alxbilger/JsonReader/main/docs/JsonReader-logo.png" align="center" alt="JsonReader" />
+ <img width="467px" height="200px" src="https://github.com/alxbilger/JsonReader/blob/main/docs/sphinx/JsonReader-logo.png?raw=true" align="center" alt="JsonReader" />
  <h2 align="center">JsonReader</h2>
  <p align="center">SOFA plugin adding the ability to read SOFA scenes written in the json format</p>
 </p>
