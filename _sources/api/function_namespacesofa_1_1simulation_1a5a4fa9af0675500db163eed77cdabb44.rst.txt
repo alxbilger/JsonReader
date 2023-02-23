@@ -1,0 +1,14 @@
+.. _exhale_function_namespacesofa_1_1simulation_1a5a4fa9af0675500db163eed77cdabb44:
+
+Function sofa::simulation::readNodeData
+=======================================
+
+- Defined in :ref:`file_src_JsonReader_SceneLoaderJson.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: sofa::simulation::readNodeData(core::BaseData *, const std::string&, nlohmann::basic_json<nlohmann::ordered_map>::const_reference)
+   :project: JsonReader

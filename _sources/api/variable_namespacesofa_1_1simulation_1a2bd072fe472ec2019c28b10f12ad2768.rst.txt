@@ -1,0 +1,14 @@
+.. _exhale_variable_namespacesofa_1_1simulation_1a2bd072fe472ec2019c28b10f12ad2768:
+
+Variable sofa::simulation::loaderJson
+=====================================
+
+- Defined in :ref:`file_src_JsonReader_SceneLoaderJson.cpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: sofa::simulation::loaderJson
+   :project: JsonReader

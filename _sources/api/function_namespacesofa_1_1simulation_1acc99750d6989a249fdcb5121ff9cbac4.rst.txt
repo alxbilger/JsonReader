@@ -1,0 +1,14 @@
+.. _exhale_function_namespacesofa_1_1simulation_1acc99750d6989a249fdcb5121ff9cbac4:
+
+Function sofa::simulation::createObject
+=======================================
+
+- Defined in :ref:`file_src_JsonReader_SceneLoaderJson.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: sofa::simulation::createObject(const std::string&, nlohmann::basic_json<nlohmann::ordered_map>::reference, Node::SPtr, const std::string&)
+   :project: JsonReader
