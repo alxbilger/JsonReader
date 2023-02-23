@@ -1,4 +1,5 @@
 ![status](https://github.com/alxbilger/JsonReader/actions/workflows/ci.yml/badge.svg)
+[![docs](https://github.com/alxbilger/JsonReader/actions/workflows/doc.yml/badge.svg)](https://alxbilger.github.io/JsonReader/)
 
 <p align="center">
  <img width="467px" height="200px" src="https://raw.githubusercontent.com/alxbilger/JsonReader/main/JsonReader-logo.png" align="center" alt="JsonReader" />
